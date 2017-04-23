@@ -1,40 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <base href="/">
-    <title>ng Events</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
-    <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/toastr/build/toastr.min.js"></script>
-    <script src="node_modules/annyang/dist/annyang.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css" />
-    <script type="text/javascript" src="node_modules/jquery/vendor/jquery/dist/jquery.min.js"></script>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script src="systemjs.config.js"></script>
+  <head>
+    <!-- This stores the URL the user was attempting to go to in sessionStorage,
+    and then redirects all 404 responses to the app’s index.html page -->
+    <!-- See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/ -->
     <script>
-        System.import('app').catch(function (err) {
-            console.error(err);
-        });
+      sessionStorage.redirect = location.href;
     </script>
-</head>
-
-<body class="container">
-    <events-app></events-app>
-</body>
-
+    <meta http-equiv="refresh" content="0;URL='https://USERNAME.github.io/PROJECT_NAME'"></meta>
+  </head>
+  <body>
+  </body>
 </html>
